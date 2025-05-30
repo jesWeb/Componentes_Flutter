@@ -1,1 +1,2 @@
-export 'package:fl_components/models/menu_option.dart';
+export '../models/menu_option.dart';
+// export 'menu_option.dart';

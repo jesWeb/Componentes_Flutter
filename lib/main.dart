@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App Bar',
       // home: const CardScreen(),
       //indicar cual es la ruta principal
-      initialRoute: AppRouter.initiaRoute,
+      initialRoute: AppRouter.initialRoute,
       //dfinir routes de la app
       //forma uno 
       // routes: {
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       //    'card': (BuildContext context) => const CardScreen()
       // },
       //forma 2
-      routes:AppRouter.routes ,
+      routes:AppRouter.getAppRoutes() ,
       //ongenerateRoure
       onGenerateRoute: AppRouter.onGenerateRoute,
 

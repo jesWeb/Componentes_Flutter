@@ -4,7 +4,7 @@ import 'package:componentes/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
-  static const initiaRoute = 'Home';
+  static const initialRoute = 'home';
   //esta es otra forma de crear las rutas pero aqui asiganmos nombre y iconos y rutas
   static final menuOptions = <MenuOption>[
     MenuOption(
@@ -34,13 +34,25 @@ class AppRouter {
         icon: Icons.card_giftcard_outlined)
   ];
 
-  static Map<String, Widget Function(BuildContext)> routes = {
-    'Home': (BuildContext context) => const HomeScreen(),
-    'Listview1': (BuildContext context) => const Listview1Screen(),
-    'Listview2': (BuildContext context) => const Listview2Screen(),
-    'alert': (BuildContext context) => const AlertScreen(),
-    'card': (BuildContext context) => const CardScreen()
-  };
+  //metodo de mapeo de rutas, up
+  static Map<String, Widget Function(BuildContext)> getAppRoutes() {
+    Map<String, Widget Function(BuildContext)> appRoutes = {};
+
+    for (final options in menuOptions) {
+      appRoutes
+          .addAll({options.route: (BuildContext context) => options.screen});
+    }
+    return appRoutes;
+  }
+
+//rutas forma uno
+  // static Map<String, Widget Function(BuildContext)> routes = {
+  //   'Home': (BuildContext context) => const HomeScreen(),
+  //   'Listview1': (BuildContext context) => const Listview1Screen(),
+  //   'Listview2': (BuildContext context) => const Listview2Screen(),
+  //   'alert': (BuildContext context) => const AlertScreen(),
+  //   'card': (BuildContext context) => const CardScreen()
+  // };
 
   // ongeerateRoutes
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {

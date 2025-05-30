@@ -1,36 +1,38 @@
-import 'package:componentes/screens/screens.dart';
+// import 'package:componentes/screens/screens.dart';
 import 'package:flutter/material.dart';
+
+import '../router/app_router.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final menuOpc = AppRouter.menuOptions;
+
     return Scaffold(
         appBar: AppBar(
           title: const Text('Componentes en flutter'),
           elevation: 0,
         ),
         body: ListView.separated(
-          itemBuilder: (context, index) => ListTile(
-            title: const Text('Nombre de la ruta'),
-            leading: const Icon(Icons.access_time),
-            onTap: () {
-              //forma de navegacion uno
-              // final route = MaterialPageRoute(
-              //     builder: (context) => const Listview1Screen());
-              // // Navigator.pushReplacement(context, route);
-              // Navigator.push(context, route);
+            itemBuilder: (context, i) => ListTile(
+                  title: Text(menuOpc[i].name),
+                  leading: Icon(menuOpc[i].icon, color: Colors.indigo,),
+                  onTap: () {
+                    //forma de navegacion uno
+                    // final route = MaterialPageRoute(
+                    //     builder: (context) => const Listview1Screen());
+                    // // Navigator.pushReplacement(context, route);
+                    // Navigator.push(context, route);
 
-            //forma dos 
-             Navigator.pushNamed(context,'Listview1');
-
-
-            },
-          ),
-          separatorBuilder: (_, __) => const Divider(),
-          itemCount: 8,
-        ));
+                    //forma dos
+                    // Navigator.pushNamed(context,'home');
+                    Navigator.pushNamed(context, menuOpc[i].route);
+                  },
+                ),
+            separatorBuilder: (_, __) => const Divider(),
+            itemCount: menuOpc.length));
   }
 }
 
