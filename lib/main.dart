@@ -1,6 +1,7 @@
-//este es un archivo donde creamos las rutas 
+//este es un archivo donde creamos las rutas
 
 import 'package:componentes/router/app_router.dart';
+import 'package:componentes/theme/app_theme.dart';
 // import 'package:componentes/screens/screens.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       //indicar cual es la ruta principal
       initialRoute: AppRouter.initialRoute,
       //dfinir routes de la app
-      //forma uno 
+      //forma uno
       // routes: {
       //   'Home': (BuildContext context) => const HomeScreen(),
       //   'Listview1': (BuildContext context) => const Listview1Screen(),
@@ -27,9 +28,12 @@ class MyApp extends StatelessWidget {
       //    'card': (BuildContext context) => const CardScreen()
       // },
       //forma 2
-      routes:AppRouter.getAppRoutes() ,
+      routes: AppRouter.getAppRoutes(),
       //ongenerateRoure
       onGenerateRoute: AppRouter.onGenerateRoute,
+
+      //theme - tener una copia rapida del tema
+      theme: AppTheme.lightTheme
 
       //ver para que srive este para regresar las rutas dinamicas y mas para cuando no estan definidas
     );

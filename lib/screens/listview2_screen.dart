@@ -17,8 +17,8 @@ class Listview2Screen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Litsa Tipo 2'),
         //sombra
-        elevation: 0,
-        backgroundColor: Colors.red,
+        // elevation: 0,
+        // backgroundColor: Colors.red,
       ),
       body: ListView.separated(
         itemCount: options.length,
