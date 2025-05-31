@@ -1,0 +1,1 @@
+export '../widgets/CustomCard1.dart';

@@ -3,12 +3,20 @@ import 'package:flutter/material.dart';
 class AppTheme {
   static const Color primary = Colors.blue;
   static const Color icons = Colors.black38;
+  static const Color btn = Colors.deepPurpleAccent;
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
-      //color primario
-      primaryColor: icons,
-      //apbar Theme
-      appBarTheme: AppBarTheme(color: primary, elevation: 0));
+    // color primario
+    primaryColor: icons,
+    // appBar Theme
+    appBarTheme: AppBarTheme(color: primary, elevation: 0),
+    // textButtonTheme
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        foregroundColor: btn,
+      ),
+    ),
+  );
 }
 
 
