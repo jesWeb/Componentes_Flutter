@@ -1,6 +1,5 @@
-import 'package:componentes/widgets/CustomCard1.dart';
 import 'package:flutter/material.dart';
-
+import '../widgets/widgets.dart';
 class CardScreen extends StatelessWidget {
   const CardScreen({super.key});
 
@@ -14,7 +13,9 @@ class CardScreen extends StatelessWidget {
         //estsos son los atributos que recibe 
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         children: [
-          CustomCard1()
+          CustomCard1(),
+          SizedBox(height: 10,),
+          CustomCardType2()
         ],
       ),
     );
