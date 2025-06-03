@@ -3,19 +3,30 @@ import 'package:flutter/material.dart';
 class AppTheme {
   static const Color primary = Colors.blue;
   static const Color icons = Colors.black38;
-  static const Color btn = Colors.deepPurpleAccent;
+  static const Color btn = Colors.black;
+  static const Color tool = Colors.amberAccent;
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
-    // color primario
-    primaryColor: icons,
-    // appBar Theme
-    appBarTheme: AppBarTheme(color: primary, elevation: 0),
-    // textButtonTheme
-    textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(
-        foregroundColor: btn,
+      // color primario
+      primaryColor: icons,
+      // appBar Theme
+      appBarTheme: AppBarTheme(color: primary, elevation: 0),
+      // textButtonTheme
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          foregroundColor: btn,
+        ),
       ),
-    ),
+      //floatign action button
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+       backgroundColor: tool, elevation: 6),
+    
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.indigo[700],
+            shape: const StadiumBorder(),
+            elevation: 0),
+      ),
   );
 }
 
