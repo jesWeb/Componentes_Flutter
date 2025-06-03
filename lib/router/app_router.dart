@@ -31,7 +31,12 @@ class AppRouter {
         route: 'card',
         name: 'cartas',
         screen: const CardScreen(),
-        icon: Icons.card_giftcard_outlined)
+        icon: Icons.card_giftcard_outlined),
+    MenuOption(
+        route: 'avatar',
+        name: 'avatar',
+        screen: const AvatarScreen(),
+        icon: Icons.supervised_user_circle)
   ];
 
   //metodo de mapeo de rutas, up
