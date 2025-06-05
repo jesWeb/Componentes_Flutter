@@ -1,6 +1,7 @@
 //este es un route global
 import 'package:componentes/models/menu_option.dart';
 import 'package:componentes/screens/inputs_screen.dart';
+import 'package:componentes/screens/listview_builder_screen.dart';
 import 'package:componentes/screens/screens.dart';
 import 'package:componentes/screens/slider_screen.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +49,12 @@ class AppRouter {
         route: 'Slider',
         name: 'Slider',
         screen: const SliderScreen(),
-        icon: Icons.movie)
+        icon: Icons.movie),
+    MenuOption(
+        route: 'Listview',
+        name: 'infinite-scroll',
+        screen: const ListviewBuilderScreen(),
+        icon: Icons.data_saver_off_sharp),
   ];
 
   //metodo de mapeo de rutas, up
