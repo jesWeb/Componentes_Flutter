@@ -2,6 +2,7 @@
 import 'package:componentes/models/menu_option.dart';
 import 'package:componentes/screens/inputs_screen.dart';
 import 'package:componentes/screens/screens.dart';
+import 'package:componentes/screens/slider_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -40,9 +41,14 @@ class AppRouter {
         icon: Icons.sick),
     MenuOption(
         route: 'inputs',
-        name: 'inputs',
+        name: 'formulario',
         screen: const InputScreen(),
-        icon: Icons.foggy)
+        icon: Icons.foggy),
+    MenuOption(
+        route: 'Slider',
+        name: 'Slider',
+        screen: const SliderScreen(),
+        icon: Icons.movie)
   ];
 
   //metodo de mapeo de rutas, up
