@@ -1,5 +1,6 @@
 //este es un route global
 import 'package:componentes/models/menu_option.dart';
+import 'package:componentes/screens/inputs_screen.dart';
 import 'package:componentes/screens/screens.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +37,12 @@ class AppRouter {
         route: 'animacion',
         name: 'animacion',
         screen: const AnimatedScreen(),
-        icon: Icons.sick)
+        icon: Icons.sick),
+    MenuOption(
+        route: 'inputs',
+        name: 'inputs',
+        screen: const InputScreen(),
+        icon: Icons.foggy)
   ];
 
   //metodo de mapeo de rutas, up
