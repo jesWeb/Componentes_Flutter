@@ -8,11 +8,6 @@ class AppRouter {
   //esta es otra forma de crear las rutas pero aqui asiganmos nombre y iconos y rutas
   static final menuOptions = <MenuOption>[
     MenuOption(
-        route: 'home',
-        name: 'Home screen',
-        screen: const HomeScreen(),
-        icon: Icons.home_filled),
-    MenuOption(
         route: 'Listview1',
         name: 'Lista 1',
         screen: const Listview1Screen(),
@@ -36,12 +31,18 @@ class AppRouter {
         route: 'avatar',
         name: 'avatar',
         screen: const AvatarScreen(),
-        icon: Icons.supervised_user_circle)
+        icon: Icons.supervised_user_circle),
+    MenuOption(
+        route: 'animacion',
+        name: 'animacion',
+        screen: const AnimatedScreen(),
+        icon: Icons.sick)
   ];
 
   //metodo de mapeo de rutas, up
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
+    appRoutes.addAll({'home': (BuildContext context) => HomeScreen()});
 
     for (final options in menuOptions) {
       appRoutes
