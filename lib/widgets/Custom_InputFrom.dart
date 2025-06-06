@@ -33,28 +33,24 @@ class inputText extends StatelessWidget {
       textCapitalization: TextCapitalization.words,
       keyboardType: keyboardType,
       obscureText: obscureText,
-      //capturara la info
+    
       onChanged: (value) => formValues[formProperty] = value,
-      //crear validacion
+     
       validator: (value) {
         if (value == null) {
           return 'Este campo es requerido';
         }
         return value.length < 3 ? 'Minimo de tres Letras' : null;
       },
-      //disparar las interacciones
+    
       autovalidateMode: AutovalidateMode.onUserInteraction,
-      //decorarar el input
+     
       decoration: InputDecoration(
         hintText: hintText,
         labelText: labelText,
         helperText: helperText,
         suffixIcon: suffixIcon == null ? null : Icon(suffixIcon),
         icon: Icon(Icons.people),
-        // border: OutlineInputBorder(
-        //     borderRadius: BorderRadius.only(
-        //         bottomLeft: Radius.circular(5),
-        //         bottomRight: Radius.elliptical(5, 5)))
       ),
     );
   }

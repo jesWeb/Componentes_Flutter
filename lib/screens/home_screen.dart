@@ -19,14 +19,6 @@ class HomeScreen extends StatelessWidget {
                   title: Text(menuOpc[i].name),
                   leading: Icon(menuOpc[i].icon, color: Theme.of(context).primaryColor),
                   onTap: () {
-                    //forma de navegacion uno
-                    // final route = MaterialPageRoute(
-                    //     builder: (context) => const Listview1Screen());
-                    // // Navigator.pushReplacement(context, route);
-                    // Navigator.push(context, route);
-
-                    //forma dos
-                    // Navigator.pushNamed(context,'home');
                     Navigator.pushNamed(context, menuOpc[i].route);
                   },
                 ),
@@ -34,11 +26,3 @@ class HomeScreen extends StatelessWidget {
             itemCount: menuOpc.length));
   }
 }
-
-//navegar entre pantallas 
-/**
- * dos formas de navegar 
- * navigator 
- * pushReplacement esteda la opcion de destruir en tre comillas la navegacion por ejemplo en un login aqui ya no podra regresar
- * con el push pude volver 
- */

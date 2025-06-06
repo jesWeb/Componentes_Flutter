@@ -6,8 +6,6 @@ class MenuOption {
   final String name;
   final Widget screen;
 
-//esta es para ver si lo manda en el orden que quier - es como si fueran los props a recibir 
-
   MenuOption(
       {required this.route,
       required this.icon,

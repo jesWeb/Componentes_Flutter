@@ -43,13 +43,6 @@ class _SliderScreenState extends State<SliderScreen> {
                   image: NetworkImage(
                       'https://static.vecteezy.com/system/resources/thumbnails/046/816/636/small/colorful-and-glowing-nebula-clouds-beautiful-space-landscape-free-photo.jpg')),
             ),
-            // Checkbox(
-            //     value: sliderEnable,
-            //     onChanged: (value) {
-            //       sliderEnable = value ?? true;
-            //       setState(() {});
-            //     })
-
             Center(
               child: CheckboxListTile(
                   activeColor: AppTheme.primary,

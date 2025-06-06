@@ -69,57 +69,8 @@ class AppRouter {
     return appRoutes;
   }
 
-//rutas forma uno
-  // static Map<String, Widget Function(BuildContext)> routes = {
-  //   'Home': (BuildContext context) => const HomeScreen(),
-  //   'Listview1': (BuildContext context) => const Listview1Screen(),
-  //   'Listview2': (BuildContext context) => const Listview2Screen(),
-  //   'alert': (BuildContext context) => const AlertScreen(),
-  //   'card': (BuildContext context) => const CardScreen()
-  // };
-
   // ongeerateRoutes
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     return MaterialPageRoute(builder: (context) => AlertScreen());
   }
 }
-
-/**
- * ¿Qué hace onGenerateRoute?
-onGenerateRoute se llama cuando se intenta navegar a una ruta que no está definida explícitamente en la propiedad routes del MaterialApp. Esto te da la oportunidad de manejar rutas de forma más flexible y con lógica personalizada.
- * 
- * MaterialApp(
-  onGenerateRoute: (RouteSettings settings) {
-    switch (settings.name) {
-      case '/':
-        return MaterialPageRoute(builder: (context) => HomePage());
-      case '/detalle':
-        return MaterialPageRoute(builder: (context) => DetallePage());
-      default:
-        return MaterialPageRoute(builder: (context) => NotFoundPage());
-    }
-  },
-);
-
-El objeto settings contiene información sobre la ruta que se está solicitando:
-
-settings.name: el nombre de la ruta (ej. /detalle)
-
-settings.arguments: argumentos opcionales que se pueden pasar al navegar
-
-con argumentos 
-Navigator.pushNamed(
-  context,
-  '/detalle',
-  arguments: {'id': 42},
-);
-
-// En onGenerateRoute
-case '/detalle':
-  final args = settings.arguments as Map;
-  return MaterialPageRoute(
-    builder: (context) => DetallePage(id: args['id']),
-  );
-
-
- */

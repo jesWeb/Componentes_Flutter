@@ -5,8 +5,6 @@ import '../widgets/Custom_InputFrom.dart';
 class InputScreen extends StatelessWidget {
   const InputScreen({super.key});
 
-  /// *las key hacen referencias a un widget ejemplo donde la usamos
-
   @override
   Widget build(BuildContext context) {
     final myformKey = GlobalKey<FormState>();
@@ -110,16 +108,11 @@ class InputScreen extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    //*minimizar teclado
                     FocusScope.of(context).requestFocus(FocusNode());
-
-                    //*validar si viene vacio
                     if (!myformKey.currentState!.validate()) {
                       print('formulario no valido');
                       return;
                     }
-
-                    //*devolver info
                     print(formVal);
                   })
             ]),

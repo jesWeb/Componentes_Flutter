@@ -10,13 +10,11 @@ class ListviewBuilderScreen extends StatefulWidget {
 
 class _ListviewBuilderScreenState extends State<ListviewBuilderScreen> {
   final List<int> imagesIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  //el controller sirve para saber su valor
+
   final ScrollController scrollControlado = ScrollController();
 
-  //evaluar la carga
   bool isLoading = false;
 
-  //listener initial donde estoy cerca
   @override
   void initState() {
     super.initState();
@@ -25,9 +23,6 @@ class _ListviewBuilderScreenState extends State<ListviewBuilderScreen> {
           scrollControlado.position.maxScrollExtent) {
         fetchData();
       }
-
-      // print(
-      //     '${scrollControlado.position.pixels}, ${scrollControlado.position.maxScrollExtent}');
     });
   }
 
@@ -75,7 +70,6 @@ class _ListviewBuilderScreenState extends State<ListviewBuilderScreen> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      //el media query sirve para quitar los espacios donde en los diospositivos teneoslos notch arriba y abajo para que aggare bien
       body: MediaQuery.removePadding(
         context: context,
         removeTop: true,

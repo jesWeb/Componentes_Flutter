@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 class AlertScreen extends StatelessWidget {
   const AlertScreen({super.key});
-  //recuerda que el builder va a retornar un
-  // widget
-  //en este caso sera el alertDialog  ///
+  
   void displayDialog(BuildContext context) {
     showDialog(
         barrierDismissible: true,
@@ -44,10 +42,6 @@ class AlertScreen extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          // style: ElevatedButton.styleFrom(
-          //     backgroundColor: Colors.indigo[700],
-          //     shape: const StadiumBorder(),
-          //     elevation: 0),
           child: const Padding(
               padding: EdgeInsets.all(20),
               child: Text(

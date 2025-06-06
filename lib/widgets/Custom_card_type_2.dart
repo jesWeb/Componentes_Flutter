@@ -17,8 +17,7 @@ class CustomCardType2 extends StatelessWidget {
         children: [
           FadeInImage(
             image: NetworkImage(imageUrl),
-            // image: NetworkImage(
-            //     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9S8NLgMf2GzqmXb80_7cSeEy5JUnaozltYA&s'),
+
             placeholder: const AssetImage('assets/jar-loading.gif'),
             width: double.infinity,
             height: 230,
