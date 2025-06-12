@@ -1,17 +1,49 @@
-# componentes
+# 📱 Componentes Flutter
 
-A new Flutter project.
+Este proyecto es una aplicación Flutter de ejemplo que muestra diferentes componentes y widgets, organizada mediante rutas y temas personalizados.
 
-## Getting Started
+1.Clona este repositorio:
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# Componentes_Flutter" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 📁 Estructura del Proyecto
+
+```text
+lib/                # Código fuente principal de la aplicación
+├── main.dart       # Punto de entrada de la app
+├── router/         # Definición de rutas y navegación
+└── theme/          # Temas personalizados
+
+assets/             # Recursos estáticos (imágenes, gifs, etc)
+
+android/            # Soporte para Android
+ios/                # Soporte para iOS
+linux/              # Soporte para Linux
+macos/              # Soporte para macOS
+windows/            # Soporte para Windows
+web/                # Soporte para Web
+
+test/               # Pruebas unitarias y de widget
